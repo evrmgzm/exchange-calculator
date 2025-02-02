@@ -19,19 +19,19 @@ This is a simple Currency Converter app built using React with Vite. It allows u
 ## How to Use
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/evrmgzm/exchange-calculator.git
    cd exchange-calculator
-   ```
+```
 
 2. Install dependencies:
-  ```bash
+```bash
   npm install
-  ```
+```
 
 3. Run the app:
-   ```bash
+ ```bash
   npm run dev
-  ```
+```
 
 ![image](https://github.com/user-attachments/assets/513c1c21-621a-4b24-aabe-1bcf5b586d87)

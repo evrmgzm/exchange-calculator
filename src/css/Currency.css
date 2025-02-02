@@ -1,0 +1,124 @@
+.currency-div {
+    color: #3f3f3f;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: auto;
+    display: flex;
+}
+
+/* Grid düzeni */
+.converter-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 1fr 2fr; /* Ok için yer açtık */
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Select'ler arası ok simgesi */
+.arrow {
+    font-size: 1.5rem;
+    color: #7b8c9a;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input ve Select kutuları */
+.amount, .result {
+    color:#333;
+    width: 80%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    text-align: center;
+    justify-self: center;
+}
+
+.from-currency-options, .to-currency-options {
+    color:#333;
+    width: 70%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #848383;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    text-align: center;
+    justify-self: center;
+    margin-right: 0.2rem;
+}
+
+
+/* Select ve Input focus efekti */
+.amount:focus, .result:focus,
+.from-currency-options:focus, .to-currency-options:focus {
+    outline: none;
+    border-color: #9e9e9e;
+    box-shadow: 0 0 0 3px rgba(158, 158, 158, 0.2);
+}
+
+/* Dönüştürme butonu */
+.convert-button {
+    background-color: #8bb2c6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    grid-column: 1 / -1;
+    width: max-content;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.convert-button:hover {
+    background-color: #78909c;
+    transform: translateY(-1px);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+}
+
+/* Sayısal inputlar için spin butonu kaldırma */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .converter-layout {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .currency-div {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .amount, .result {
+        width: 100%;
+    }
+}
